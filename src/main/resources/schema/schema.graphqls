@@ -1,0 +1,23 @@
+type Query {
+    shows: [Show]
+    show(showId: ID!): Show
+    movies: [Movie]
+    actor(movieId: ID!): Movie
+}
+
+type Show {
+    showId: ID!
+    title: String!
+    actors: [Actor]
+}
+
+type Movie {
+    movieId: ID!
+    title: String!
+    actors: [Actor]
+}
+
+type Actor {
+    actorId: ID!
+    name: String!
+}
