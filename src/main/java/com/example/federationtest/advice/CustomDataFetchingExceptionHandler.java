@@ -1,4 +1,4 @@
-package com.example.federationtest;
+package com.example.federationtest.advice;
 
 import com.netflix.graphql.dgs.exceptions.DefaultDataFetcherExceptionHandler;
 import com.netflix.graphql.types.errors.ErrorType;

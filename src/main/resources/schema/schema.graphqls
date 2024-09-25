@@ -1,3 +1,5 @@
+scalar DateTime
+
 type Query {
     shows: [Show]
     show(showId: ID!): Show
@@ -9,6 +11,7 @@ type Show {
     showId: ID!
     title: String!
     actors: [Actor]
+    releaseDate: DateTime
 }
 
 type Movie {

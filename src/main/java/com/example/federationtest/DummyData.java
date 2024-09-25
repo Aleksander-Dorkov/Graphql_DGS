@@ -5,6 +5,7 @@ import com.example.netflixdgs.codegen.types.Movie;
 import com.example.netflixdgs.codegen.types.Show;
 import lombok.Getter;
 
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -14,29 +15,40 @@ import java.util.stream.Collectors;
 public class DummyData {
 
     public static final List<Actor> actors = List.of(
-            Actor.newBuilder().actorId("actor1").name("Tom Hanks").build(),
-            Actor.newBuilder().actorId("actor2").name("Meryl Streep").build(),
+            Actor.newBuilder()
+                    .actorId("actor1")
+                    .name("Tom Hanks")
+                    .build(),
+            Actor.newBuilder()
+                    .actorId("actor2")
+                    .name("Meryl Streep")
+                    .build(),
             Actor.newBuilder().actorId("actor3").name("Denzel Washington").build(),
             Actor.newBuilder().actorId("actor4").name("Viola Davis").build(),
             Actor.newBuilder().actorId("actor5").name("Leonardo DiCaprio").build()
     );
+
     public static final List<Show> shows = List.of(
             Show.newBuilder()
                     .showId("show1")
                     .title("Stranger Things")
                     .actors(Arrays.asList(actors.get(0), actors.get(1)))
+                    .releaseDate(LocalDateTime.of(2016, 7, 15, 0, 0)) // July 15, 2016 at 00:00
                     .build(),
             Show.newBuilder()
                     .showId("show2")
                     .title("The Crown")
                     .actors(Arrays.asList(actors.get(2), actors.get(3)))
+                    .releaseDate(LocalDateTime.of(2016, 11, 4, 0, 0)) // November 4, 2016 at 00:00
                     .build(),
             Show.newBuilder()
                     .showId("show3")
                     .title("Breaking Bad")
                     .actors(Arrays.asList(actors.get(4), actors.get(0)))
+                    .releaseDate(LocalDateTime.of(2008, 1, 20, 0, 0)) // January 20, 2008 at 00:00
                     .build()
     );
+
     public static final List<Movie> movies = List.of(
             Movie.newBuilder()
                     .movieId("movie1")

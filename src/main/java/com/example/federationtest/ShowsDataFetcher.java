@@ -18,12 +18,12 @@ public class ShowsDataFetcher {
 
     @DgsQuery
     public List<Show> shows() {
-        randomNumberGenerator();
         return DummyData.shows;
     }
 
     @DgsQuery
     public List<Movie> movies() {
+        randomNumberGenerator();
         return DummyData.movies;
     }
 

@@ -45,6 +45,10 @@ generateJava {
                    "${projectDir}/src/main/resources/schema/schema.graphqls"]
     packageName = 'com.example.netflixdgs.codegen'
     generateClient = true
+    // used for custom scalar types only
+    typeMapping = [
+            "DateTime": "java.time.LocalDateTime"
+    ]
 }
 
 tasks.named('test') {
