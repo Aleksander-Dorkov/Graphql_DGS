@@ -29,5 +29,3 @@ The default setup assumes that the GraphQL schema file for the remote service is
 
 You can learn more about the [plugin configuration options](https://netflix.github.io/dgs/generating-code-from-schema/#configuring-code-generation) and
 [how to use the generated types](https://netflix.github.io/dgs/generating-code-from-schema/) to adapt the default setup.
-
-
